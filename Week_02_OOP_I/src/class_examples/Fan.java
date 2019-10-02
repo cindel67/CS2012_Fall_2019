@@ -21,8 +21,11 @@ public class Fan {
 
 	public Fan(int speed, boolean on, double temperature,
 			boolean oscillating) {
+		
+	
 
-		this.setSpeed(speed);
+		this.speed = speed;
+		//this.setSpeed(speed);
 		this.on = on;
 		this.temperature = temperature;
 		this.oscillating = oscillating;
@@ -31,7 +34,6 @@ public class Fan {
 
 	public Fan(int speed, boolean on, double temperature,
 			boolean oscillating, String color) {
-
 		this.setSpeed(speed);
 		this.on = on;
 		this.temperature = temperature;
@@ -46,6 +48,10 @@ public class Fan {
 		return this.speed;
 	}
 
+	private static void myMethod() {
+		
+	}
+	
 	public void setSpeed(int speed) {
 		if (speed < 0) {
 			System.out.println("ERROR: Speed cannot be negative.");
@@ -55,4 +61,24 @@ public class Fan {
 			this.speed = speed;
 		}
 	}
+	
+	public int addSpeed(Fan fan2) {
+		return this.speed + fan2.speed;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

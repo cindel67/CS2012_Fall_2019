@@ -4,6 +4,7 @@ public class MyClassWithToString {
 	private int x;
 	private double[] data;
 	private String color;
+	private double y;
 	
 	public MyClassWithToString() {
 		this.x = 1;
@@ -47,18 +48,23 @@ public class MyClassWithToString {
 	public String toString() {
 		String result = "";
 		
-		result += "x:\t" + this.x + "\n";
-		result += "data:\t";
 		
-		for (int i = 0 ; i < this.data.length ; i++) {
-			result += this.data[i] + " ";
-		}
+		
+		result += String.format("x:%10d\n y:%5.2f\n", this.x, this.y);
+		
+		
+		//result += "data:\t";
+		
+		//result += "y:\t" + this.y + "\n";
 
 		result += "\ncolor:\t" + this.color;
 
 		return result;
 	}
-	
+	/*for (int i = 0 ; i < this.data.length ; i++) {
+			result += this.data[i] + " ";
+		}
+		*/
 	
 	
 	
